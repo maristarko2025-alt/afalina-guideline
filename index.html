@@ -2752,33 +2752,5 @@
 
   </div>
 
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-
-        // Не трогаем «пустые» якоря (бургер-меню, закрытие drawer)
-        if (href === '#' || href === '#!') return;
-
-        const target = document.querySelector(href);
-        if (!target) return;
-
-        e.preventDefault();
-
-        // Для логотипа (или первого якоря) — в самый верх
-        if (href === '#hero') {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        // Чистим якорь, сохраняя путь и query-параметры
-        history.replaceState(null, '', location.pathname + location.search);
-      });
-    });
-  });
-</script>
-
 </body>
 </html>

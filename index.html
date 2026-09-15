@@ -1,0 +1,2738 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>АФАЛИНА rent — Концепция сайта</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon-pin.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="АФАЛИНА rent — Концепция сайта">
+  <meta property="og:description" content="Визуальная концепция сайта АФАЛИНА rent: характер бренда, палитра, типографика и UI-элементы.">
+  <meta property="og:image" content="https://example.com/images/social-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Визуальная концепция сайта АФАЛИНА rent">
+  <meta property="og:url" content="https://example.com/">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      outline: none;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    *:focus-visible {
+      outline: 2px solid #68a1a6;
+    }
+    /* Цвет выделения текста */
+::selection {
+  background: #E48340;
+  color: #F7F6F6;
+}
+
+    /* Сэм для Маши: Scoped CSS с переменными концепции АФАЛИНА rent */
+    .sm-afalina-concept {
+      --bg-base: #F7F6F6;
+      --graphite: #2E353C;
+      --accent: #E48340;
+      --accent-hover: #cf6f2e;
+      --gray-light: #E3E7EB;
+      --gray-blue: #B7C1CB;
+      --cold-blue: #8B9CAD;
+
+      --font-title: 'Golos Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+      --r-0: 0px;
+      --r-2: 2px;
+      --r-4: 4px;
+
+      width: 100%;
+      max-width: 100%;
+      background-color: var(--bg-base);
+      color: var(--graphite);
+      font-family: var(--font-body);
+      line-height: 1.45;
+      position: relative;
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .sm-afalina-concept .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    @media (min-width: 768px) {
+      .sm-afalina-concept .container {
+        padding: 0 32px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .sm-afalina-concept .container {
+        padding: 0 40px;
+      }
+    }
+
+    @keyframes sm-pulse-dot {
+      0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(228, 131, 64, 0.7);
+      }
+      70% {
+        transform: scale(1.15);
+        box-shadow: 0 0 0 5px rgba(228, 131, 64, 0);
+      }
+      100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(228, 131, 64, 0);
+      }
+    }
+
+    /* Навигационная панель */
+    .sm-afalina-concept .sticky-nav-bar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(247, 246, 246, 0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--gray-light);
+      box-shadow: 0 4px 20px rgba(46, 53, 60, 0.04);
+    }
+
+    .sm-afalina-concept .sticky-nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 58px;
+      position: relative;
+    }
+
+    .sm-afalina-concept .sticky-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--graphite);
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+      flex-shrink: 0;
+      z-index: 1002;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .sm-afalina-concept .sticky-brand:hover {
+      color: var(--accent);
+      transform: translateX(2px);
+    }
+
+    .sm-afalina-concept .sticky-dot {
+      width: 7px;
+      height: 7px;
+      background-color: var(--accent);
+      border-radius: var(--r-0);
+      display: inline-block;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .sm-afalina-concept .sticky-brand:hover .sticky-dot {
+      transform: rotate(45deg) scale(1.1);
+    }
+
+    .sm-afalina-concept .sticky-desktop-links {
+      display: none;
+      align-items: center;
+      gap: 22px;
+    }
+
+    @media (min-width: 960px) {
+      .sm-afalina-concept .sticky-desktop-links {
+        display: flex;
+      }
+    }
+
+    .sm-afalina-concept .sticky-nav-link {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--graphite);
+      white-space: nowrap;
+      transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+      opacity: 0.85;
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .sm-afalina-concept .sticky-nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent);
+      transition: width 0.2s ease;
+    }
+
+    .sm-afalina-concept .sticky-nav-link:hover {
+      color: var(--accent);
+      opacity: 1;
+      transform: translateY(-1px);
+    }
+
+    .sm-afalina-concept .sticky-nav-link:hover::after {
+      width: 100%;
+    }
+
+    .sm-afalina-concept .sticky-nav-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sm-afalina-concept .sticky-badge {
+      font-family: monospace;
+      font-size: 11px;
+      padding: 3px 7px;
+      background: var(--gray-light);
+      border-radius: var(--r-2);
+      color: var(--cold-blue);
+      letter-spacing: 0.05em;
+      display: none;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .sm-afalina-concept .sticky-badge:hover {
+      background: var(--gray-blue);
+      color: var(--graphite);
+    }
+
+    @media (min-width: 640px) {
+      .sm-afalina-concept .sticky-badge {
+        display: inline-block;
+      }
+    }
+
+    .sm-afalina-concept .sticky-desktop-cta {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--accent);
+      color: #F7F6F6;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: var(--r-2);
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+
+    @media (min-width: 960px) {
+      .sm-afalina-concept .sticky-desktop-cta {
+        display: inline-flex;
+      }
+    }
+
+    .sm-afalina-concept .sticky-desktop-cta:hover {
+      background-color: var(--accent-hover);
+      border-color: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(228, 131, 64, 0.3);
+    }
+
+    .sm-afalina-concept .sticky-desktop-cta:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    .sm-afalina-concept .nav-burger-btn {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background-color: #ffffff;
+      border: 1px solid var(--gray-blue);
+      border-radius: var(--r-2);
+      cursor: pointer;
+      padding: 0;
+      gap: 5px;
+      transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
+      z-index: 1002;
+      user-select: none;
+      text-decoration: none;
+      position: relative;
+    }
+
+    @media (min-width: 960px) {
+      .sm-afalina-concept .nav-burger-btn {
+        display: none !important;
+      }
+    }
+
+    .sm-afalina-concept .nav-burger-btn:hover {
+      border-color: var(--accent);
+      background-color: var(--gray-light);
+      transform: translateY(-1px);
+    }
+
+    .sm-afalina-concept .burger-line {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background-color: var(--graphite);
+      border-radius: 1px;
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease, background-color 0.2s ease;
+      transform-origin: center;
+    }
+
+    .sm-afalina-concept .nav-burger-btn:hover .burger-line {
+      background-color: var(--accent);
+    }
+
+    .sm-afalina-concept .nav-burger-close {
+      display: none;
+      gap: 0;
+    }
+
+    .sm-afalina-concept .nav-burger-close .line-cross-1 {
+      position: absolute;
+      transform: rotate(45deg);
+    }
+
+    .sm-afalina-concept .nav-burger-close .line-cross-2 {
+      position: absolute;
+      transform: rotate(-45deg);
+    }
+
+    .sm-afalina-concept #sm-mobile-drawer:target ~ .container .nav-burger-open {
+      display: none;
+    }
+
+    .sm-afalina-concept #sm-mobile-drawer:target ~ .container .nav-burger-close {
+      display: inline-flex;
+    }
+
+    .sm-afalina-concept .mobile-menu-backdrop {
+      display: none;
+      position: fixed;
+      top: 58px;
+      left: 0;
+      width: 100vw;
+      height: calc(100vh - 58px);
+      background: rgba(46, 53, 60, 0.35);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      z-index: 998;
+      cursor: pointer;
+    }
+
+    .sm-afalina-concept #sm-mobile-drawer:target + .mobile-menu-backdrop {
+      display: block;
+    }
+
+    @media (min-width: 960px) {
+      .sm-afalina-concept .mobile-menu-backdrop {
+        display: none !important;
+      }
+    }
+
+    .sm-afalina-concept .mobile-menu-drawer {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #F7F6F6;
+      border-bottom: 1px solid var(--gray-blue);
+      box-shadow: 0 16px 32px rgba(46, 53, 60, 0.12);
+      padding: 0 16px;
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      z-index: 999;
+      transition: max-height 0.32s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.22s ease, visibility 0.32s;
+    }
+
+    @media (min-width: 960px) {
+      .sm-afalina-concept .mobile-menu-drawer {
+        display: none !important;
+      }
+    }
+
+    .sm-afalina-concept #sm-mobile-drawer:target {
+      max-height: 560px;
+      opacity: 1;
+      visibility: visible;
+      padding: 16px 16px 24px;
+    }
+
+    .sm-afalina-concept .mobile-menu-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .sm-afalina-concept .mobile-menu-item {
+      margin: 0;
+      padding: 0;
+    }
+
+    .sm-afalina-concept .mobile-menu-click-zone {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 12px 12px;
+      cursor: pointer;
+      user-select: none;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--graphite);
+      text-decoration: none;
+      border-radius: var(--r-2);
+      border-bottom: 1px dashed var(--gray-light);
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease, padding-left 0.2s ease;
+    }
+
+    .sm-afalina-concept .mobile-menu-item:last-child .mobile-menu-click-zone {
+      border-bottom: none;
+    }
+
+    .sm-afalina-concept .mobile-menu-click-zone:hover,
+    .sm-afalina-concept .mobile-menu-click-zone:active {
+      background-color: var(--gray-light);
+      color: var(--accent);
+      padding-left: 16px;
+    }
+
+    .sm-afalina-concept .mobile-menu-num {
+      font-family: monospace;
+      font-size: 11px;
+      color: var(--cold-blue);
+      transition: color 0.2s ease;
+    }
+
+    .sm-afalina-concept .mobile-menu-click-zone:hover .mobile-menu-num {
+      color: var(--accent);
+    }
+
+    .sm-afalina-concept .mobile-menu-action {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--gray-light);
+    }
+
+    .sm-afalina-concept .mobile-cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: var(--accent);
+      color: #F7F6F6;
+      border-radius: var(--r-2);
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      box-shadow: 0 4px 12px rgba(228, 131, 64, 0.25);
+      padding: 12px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+
+    .sm-afalina-concept .mobile-cta-btn:hover {
+      background-color: var(--accent-hover);
+      border-color: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(228, 131, 64, 0.35);
+    }
+
+    .sm-afalina-concept .mobile-cta-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba(228, 131, 64, 0.2);
+    }
+
+    .sm-afalina-concept .top-meta-bar {
+      border-bottom: 1px solid var(--gray-light);
+      padding: 10px 0;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cold-blue);
+    }
+
+    .sm-afalina-concept .top-meta-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .sm-afalina-concept .top-meta-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s ease;
+    }
+
+    .sm-afalina-concept .top-meta-group:hover {
+      color: var(--graphite);
+    }
+
+    .sm-afalina-concept .status-dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--accent);
+      border-radius: var(--r-0);
+      display: inline-block;
+      animation: sm-pulse-dot 2.2s infinite ease-in-out;
+    }
+
+    .sm-afalina-concept .hero-section {
+      padding: clamp(36px, 6vw, 84px) 0 clamp(36px, 5vw, 68px);
+      border-bottom: 1px solid var(--gray-light);
+      position: relative;
+    }
+
+    .sm-afalina-concept .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    @media (min-width: 960px) {
+      .sm-afalina-concept .hero-grid {
+        grid-template-columns: 1.25fr 0.75fr;
+        align-items: end;
+      }
+    }
+
+    .sm-afalina-concept .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 12px;
+      border: 1px solid var(--gray-blue);
+      border-radius: var(--r-2);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--graphite);
+      margin-bottom: 20px;
+      background: rgba(227, 231, 235, 0.45);
+      transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: default;
+    }
+
+    .sm-afalina-concept .brand-badge:hover {
+      border-color: var(--accent);
+      background-color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(46, 53, 60, 0.05);
+    }
+
+    .sm-afalina-concept .hero-title {
+      font-family: var(--font-title);
+      font-size: clamp(28px, 5.5vw, 64px);
+      line-height: 1.08;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px 0;
+      color: var(--graphite);
+      word-break: break-word;
+    }
+
+    .sm-afalina-concept .hero-title span {
+      color: var(--accent);
+      transition: opacity 0.2s ease;
+    }
+
+    .sm-afalina-concept .hero-title:hover span {
+      opacity: 0.85;
+    }
+
+    .sm-afalina-concept .hero-desc {
+      font-size: clamp(15px, 1.8vw, 19px);
+      line-height: 1.45;
+      color: var(--cold-blue);
+      margin: 0;
+      max-width: 540px;
+    }
+
+    .sm-afalina-concept .hero-panel {
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px;
+      background-color: rgba(227, 231, 235, 0.45);
+      border-radius: var(--r-0) var(--r-4) var(--r-4) var(--r-0);
+      transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+      cursor: default;
+    }
+
+    .sm-afalina-concept .hero-panel:hover {
+      background-color: #ffffff;
+      transform: translateX(4px);
+      box-shadow: 0 6px 18px rgba(46, 53, 60, 0.06);
+    }
+
+    .sm-afalina-concept .hero-panel-coord {
+      font-family: monospace;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      color: var(--cold-blue);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sm-afalina-concept .hero-panel-text {
+      font-size: 14px;
+      margin: 0;
+      color: var(--graphite);
+      font-weight: 500;
+    }
+
+    .sm-afalina-concept .section-head {
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      border-bottom: 1px solid var(--gray-light);
+      padding-bottom: 16px;
+    }
+
+    .sm-afalina-concept .section-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    .sm-afalina-concept .section-tag:hover {
+      transform: translateX(2px);
+    }
+
+    .sm-afalina-concept .section-tag-dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      display: inline-block;
+      animation: sm-pulse-dot 2s infinite ease-in-out;
+      flex-shrink: 0;
+    }
+
+    .sm-afalina-concept .section-title {
+      font-family: var(--font-title);
+      font-size: clamp(24px, 3.4vw, 36px);
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: -0.015em;
+      color: var(--graphite);
+      line-height: 1.15;
+    }
+
+    /* СЕКЦИЯ: Характер бренда */
+    .sm-afalina-concept .brand-character {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--gray-light);
+    }
+
+    .sm-afalina-concept .character-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 860px) {
+      .sm-afalina-concept .character-wrap {
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: stretch;
+      }
+    }
+
+    .sm-afalina-concept .character-quote {
+      border: 1px solid var(--gray-blue);
+      border-top: 3px solid var(--graphite);
+      padding: clamp(20px, 3vw, 32px);
+      background: #F7F6F6;
+      border-radius: var(--r-2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      cursor: default;
+    }
+
+    .sm-afalina-concept .character-quote:hover {
+      transform: translateY(-3px);
+      border-color: var(--graphite);
+      box-shadow: 0 10px 24px rgba(46, 53, 60, 0.08);
+      background: #ffffff;
+    }
+
+    .sm-afalina-concept .quote-main {
+      font-family: var(--font-title);
+      font-size: clamp(18px, 2.6vw, 27px);
+      line-height: 1.32;
+      font-weight: 500;
+      color: var(--graphite);
+      margin: 0;
+    }
+
+    .sm-afalina-concept .character-accent-card {
+      background: var(--graphite);
+      color: #F7F6F6;
+      padding: clamp(20px, 3vw, 32px);
+      border-radius: var(--r-2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      border-left: 4px solid var(--accent);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: default;
+    }
+
+    .sm-afalina-concept .character-accent-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(46, 53, 60, 0.22);
+    }
+
+    .sm-afalina-concept .accent-text {
+      font-family: var(--font-title);
+      font-size: clamp(17px, 2.2vw, 23px);
+      line-height: 1.35;
+      font-weight: 600;
+      color: #F7F6F6;
+      margin: 0;
+    }
+
+    /* СЕКЦИЯ: Цветовая палитра */
+    .sm-afalina-concept .palette-section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--gray-light);
+    }
+
+    .sm-afalina-concept .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      width: 100%;
+    }
+
+    @media (min-width: 680px) {
+      .sm-afalina-concept .palette-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+    }
+
+    @media (min-width: 1040px) {
+      .sm-afalina-concept .palette-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 12px;
+      }
+    }
+
+    .sm-afalina-concept .color-card {
+      position: relative;
+      border-radius: var(--r-4);
+      padding: 14px 10px;
+      min-height: 184px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: inset 0 0 0 1px rgba(46, 53, 60, 0.08);
+      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    @media (min-width: 480px) {
+      .sm-afalina-concept .color-card {
+        padding: 16px 14px;
+      }
+    }
+
+    .sm-afalina-concept .color-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(46, 53, 60, 0.12), inset 0 0 0 1px rgba(46, 53, 60, 0.15);
+    }
+
+    .sm-afalina-concept .c-light { color: #F7F6F6; }
+    .sm-afalina-concept .c-dark { color: #2E353C; }
+
+    .sm-afalina-concept .card-top {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .sm-afalina-concept .color-name {
+      font-family: var(--font-title);
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+
+    @media (min-width: 480px) {
+      .sm-afalina-concept .color-name {
+        font-size: 14px;
+      }
+    }
+
+    .sm-afalina-concept .color-mood {
+      font-size: 10px;
+      line-height: 1.3;
+      opacity: 0.85;
+      font-weight: 400;
+    }
+
+    @media (min-width: 480px) {
+      .sm-afalina-concept .color-mood {
+        font-size: 11px;
+      }
+    }
+
+    .sm-afalina-concept .card-bottom {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .sm-afalina-concept .color-role {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0.7;
+    }
+
+    @media (min-width: 480px) {
+      .sm-afalina-concept .color-role {
+        font-size: 10px;
+      }
+    }
+
+    .sm-afalina-concept .color-action-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .sm-afalina-concept .hex-val {
+      font-family: monospace;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    @media (min-width: 480px) {
+      .sm-afalina-concept .hex-val {
+        font-size: 12px;
+      }
+    }
+
+    .sm-afalina-concept .copy-label {
+      position: relative;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+      max-width: 100%;
+    }
+
+    .sm-afalina-concept .copy-toggle-input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .sm-afalina-concept .copy-btn-ui {
+      font-size: 9px;
+      padding: 2px 6px;
+      border: 1px solid currentColor;
+      border-radius: var(--r-2);
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.15s ease, background-color 0.2s ease, color 0.2s ease;
+      background: transparent;
+      line-height: 1.15;
+      white-space: nowrap;
+    }
+
+    @media (min-width: 480px) {
+      .sm-afalina-concept .copy-btn-ui {
+        font-size: 10px;
+        padding: 3px 7px;
+      }
+    }
+
+    .sm-afalina-concept .copy-label:hover .copy-btn-ui {
+      transform: translateY(-1px) scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .sm-afalina-concept .c-dark .copy-label:hover .copy-btn-ui {
+      background: rgba(46, 53, 60, 0.12);
+    }
+
+    .sm-afalina-concept .copy-btn-ui .state-done {
+      display: none;
+    }
+
+    .sm-afalina-concept .copy-toggle-input:checked + .copy-btn-ui .state-idle {
+      display: none;
+    }
+
+    .sm-afalina-concept .copy-toggle-input:checked + .copy-btn-ui .state-done {
+      display: inline;
+    }
+
+    .sm-afalina-concept .copy-toggle-input:checked + .copy-btn-ui {
+      background: currentColor;
+    }
+
+    .sm-afalina-concept .c-light .copy-toggle-input:checked + .copy-btn-ui span {
+      color: #2E353C;
+    }
+
+    .sm-afalina-concept .c-dark .copy-toggle-input:checked + .copy-btn-ui span {
+      color: #F7F6F6;
+    }
+
+    /* СЕКЦИЯ: Типографика */
+    .sm-afalina-concept .typography-section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--gray-light);
+    }
+
+    .sm-afalina-concept .typo-showcase {
+      border: 1px solid var(--gray-blue);
+      border-radius: var(--r-4);
+      padding: clamp(20px, 4vw, 44px);
+      background: #F7F6F6;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+      cursor: default;
+    }
+
+    .sm-afalina-concept .typo-showcase:hover {
+      border-color: var(--cold-blue);
+      background: #ffffff;
+      box-shadow: 0 10px 26px rgba(46, 53, 60, 0.05);
+    }
+
+    .sm-afalina-concept .typo-hero-text {
+      font-family: var(--font-title);
+      font-size: clamp(26px, 5.2vw, 60px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--graphite);
+      border-bottom: 1px dashed var(--gray-blue);
+      padding-bottom: 20px;
+      word-break: break-word;
+      transition: color 0.2s ease;
+    }
+
+    .sm-afalina-concept .typo-hero-text:hover {
+      color: var(--accent);
+    }
+
+    .sm-afalina-concept .typo-cyrillic {
+      font-family: var(--font-title);
+      font-size: clamp(17px, 3vw, 34px);
+      line-height: 1.35;
+      font-weight: 500;
+      color: var(--graphite);
+      letter-spacing: 0.02em;
+      word-break: break-word;
+      transition: color 0.2s ease;
+    }
+
+    .sm-afalina-concept .typo-cyrillic:hover {
+      color: var(--cold-blue);
+    }
+
+    .sm-afalina-concept .typo-digits {
+      font-family: var(--font-body);
+      font-size: clamp(24px, 4.5vw, 52px);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--cold-blue);
+      line-height: 1.1;
+      word-break: break-all;
+      transition: color 0.2s ease;
+    }
+
+    .sm-afalina-concept .typo-digits:hover {
+      color: var(--accent);
+    }
+
+    .sm-afalina-concept .typo-caption-box {
+      border-top: 1px solid var(--gray-light);
+      padding-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .sm-afalina-concept .typo-caption {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--graphite);
+    }
+
+    /* СЕКЦИЯ: Логотип */
+    .sm-afalina-concept .logo-section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--gray-light);
+    }
+
+    .sm-afalina-concept .logo-sub {
+      font-size: 14px;
+      color: var(--cold-blue);
+      margin: -14px 0 24px 0;
+    }
+
+    .sm-afalina-concept .logo-variants-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 840px) {
+      .sm-afalina-concept .logo-variants-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .sm-afalina-concept .logo-card-frame {
+      border: 1px solid var(--gray-blue);
+      border-radius: var(--r-4);
+      padding: clamp(16px, 3vw, 24px);
+      background: #F7F6F6;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+      cursor: default;
+    }
+
+    .sm-afalina-concept .logo-card-frame:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(46, 53, 60, 0.06);
+      background: #ffffff;
+    }
+
+    .sm-afalina-concept .logo-tag-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--cold-blue);
+      font-weight: 600;
+    }
+
+    .sm-afalina-concept .logo-previews {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .sm-afalina-concept .preview-box {
+      padding: 22px 14px;
+      border-radius: var(--r-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: transform 0.2s ease;
+    }
+
+    .sm-afalina-concept .preview-box:hover {
+      transform: scale(1.015);
+    }
+
+    .sm-afalina-concept .preview-box.light-bg {
+      background-color: #F7F6F6;
+      border: 1px solid var(--gray-blue);
+      color: var(--graphite);
+    }
+
+    .sm-afalina-concept .preview-box.dark-bg {
+      background-color: #2E353C;
+      color: #F7F6F6;
+    }
+
+    .sm-afalina-concept .logo-ph-h {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-title);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      font-size: clamp(17px, 3.5vw, 22px);
+      max-width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .sm-afalina-concept .logo-ph-h .logo-mark {
+      width: 23px;
+      height: 23px;
+      background: var(--accent);
+      border-radius: var(--r-0);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .sm-afalina-concept .preview-box:hover .logo-ph-h .logo-mark {
+      transform: rotate(225deg) scale(1.15);
+    }
+
+    .sm-afalina-concept .logo-ph-h .rent-tag {
+      font-family: var(--font-body);
+      font-size: 10px;
+      text-transform: uppercase;
+      padding: 2px 5px;
+      border: 1px solid currentColor;
+      border-radius: var(--r-2);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .sm-afalina-concept .preview-box:hover .logo-ph-h .rent-tag {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+
+    .sm-afalina-concept .logo-ph-v {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      font-family: var(--font-title);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      font-size: clamp(17px, 3.5vw, 20px);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .sm-afalina-concept .preview-box:hover .logo-ph-v {
+      transform: scale(1.05);
+    }
+
+    .sm-afalina-concept .logo-ph-v .rent-sub {
+      font-family: var(--font-body);
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .sm-afalina-concept .context-previews {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .sm-afalina-concept .context-box {
+      border: 1px dashed var(--gray-blue);
+      border-radius: var(--r-2);
+      padding: 8px 10px;
+      background: rgba(227, 231, 235, 0.4);
+      min-width: 0;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .sm-afalina-concept .context-box:hover {
+      border-color: var(--accent);
+      background-color: rgba(227, 231, 235, 0.7);
+    }
+
+    .sm-afalina-concept .context-label {
+      font-size: 9px;
+      color: var(--cold-blue);
+      margin-bottom: 6px;
+      display: block;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sm-afalina-concept .mock-header-strip {
+      background: #2E353C;
+      color: #F7F6F6;
+      padding: 6px 8px;
+      border-radius: var(--r-2);
+      font-size: 10px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: transform 0.15s ease;
+    }
+
+    .sm-afalina-concept .context-box:hover .mock-header-strip {
+      transform: translateY(-1px);
+    }
+
+    .sm-afalina-concept .mock-mob-strip {
+      background: #F7F6F6;
+      border: 1px solid var(--gray-blue);
+      color: var(--graphite);
+      padding: 6px 8px;
+      border-radius: var(--r-2);
+      font-size: 10px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: transform 0.15s ease, border-color 0.2s ease;
+    }
+
+    .sm-afalina-concept .context-box:hover .mock-mob-strip {
+      transform: translateY(-1px);
+      border-color: var(--accent);
+    }
+
+    .sm-afalina-concept .favicon-row {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--gray-light);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--cold-blue);
+      transition: color 0.2s ease;
+    }
+
+    .sm-afalina-concept .favicon-row:hover {
+      color: var(--graphite);
+    }
+
+    .sm-afalina-concept .favicon-chip {
+      width: 28px;
+      height: 28px;
+      background: var(--graphite);
+      color: var(--accent);
+      border-radius: var(--r-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid var(--gray-blue);
+      flex-shrink: 0;
+      transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .sm-afalina-concept .favicon-row:hover .favicon-chip {
+      transform: scale(1.1) rotate(5deg);
+      border-color: var(--accent);
+      background-color: #1e242a;
+    }
+
+    /* СЕКЦИЯ: Меню сайта */
+    .sm-afalina-concept .menu-showcase-section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--gray-light);
+    }
+
+    .sm-afalina-concept .nav-demo-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .sm-afalina-concept .nav-desktop-card {
+      background: #F7F6F6;
+      border: 1px solid var(--gray-blue);
+      border-radius: var(--r-4);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 4px 16px rgba(46, 53, 60, 0.03);
+      width: 100%;
+      overflow-x: auto;
+      scrollbar-width: none;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    }
+
+    .sm-afalina-concept .nav-desktop-card:hover {
+      border-color: var(--cold-blue);
+      box-shadow: 0 8px 24px rgba(46, 53, 60, 0.07);
+      background-color: #F7F6F6;
+    }
+
+    .sm-afalina-concept .nav-desktop-card::-webkit-scrollbar {
+      display: none;
+    }
+
+    .sm-afalina-concept .site-logo {
+      font-family: var(--font-title);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--graphite);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: transform 0.2s ease, color 0.2s ease;
+      cursor: default;
+    }
+
+    .sm-afalina-concept .site-logo:hover {
+      transform: scale(1.02);
+      color: var(--accent);
+    }
+
+    .sm-afalina-concept .site-logo-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: var(--r-0);
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .sm-afalina-concept .site-logo:hover .site-logo-dot {
+      transform: rotate(45deg);
+    }
+
+    .sm-afalina-concept .nav-links-list {
+      display: none;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (min-width: 920px) {
+      .sm-afalina-concept .nav-links-list {
+        display: flex;
+      }
+    }
+
+    .sm-afalina-concept .nav-link-item a {
+      text-decoration: none;
+      color: var(--graphite);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s ease, transform 0.15s ease;
+      white-space: nowrap;
+      display: inline-block;
+      position: relative;
+      padding: 3px 0;
+    }
+
+    .sm-afalina-concept .nav-link-item a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.2s ease;
+    }
+
+    .sm-afalina-concept .nav-link-item a:hover {
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .sm-afalina-concept .nav-link-item a:hover::after {
+      width: 100%;
+    }
+
+    .sm-afalina-concept .nav-mobile-card {
+      background: #2E353C;
+      color: #F7F6F6;
+      border-radius: var(--r-4);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 100%;
+      gap: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .sm-afalina-concept .nav-mobile-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(46, 53, 60, 0.2);
+    }
+
+    .sm-afalina-concept .mob-burger-btn {
+      width: 32px;
+      height: 32px;
+      background: transparent;
+      border: 1px solid var(--cold-blue);
+      border-radius: var(--r-2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      padding: 0;
+      flex-shrink: 0;
+      transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .sm-afalina-concept .mob-burger-btn:hover {
+      border-color: var(--accent);
+      background-color: rgba(228, 131, 64, 0.15);
+      transform: scale(1.05);
+    }
+
+    .sm-afalina-concept .mob-burger-line {
+      width: 15px;
+      height: 1.5px;
+      background: #F7F6F6;
+      transition: background-color 0.2s ease;
+    }
+
+    .sm-afalina-concept .mob-burger-btn:hover .mob-burger-line {
+      background-color: var(--accent);
+    }
+
+    /* СЕКЦИЯ: UI-элементы */
+    .sm-afalina-concept .ui-section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--gray-light);
+    }
+
+    .sm-afalina-concept .ui-layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 880px) {
+      .sm-afalina-concept .ui-layout-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .sm-afalina-concept .ui-buttons-block {
+      border: 1px solid var(--gray-blue);
+      border-radius: var(--r-4);
+      padding: clamp(16px, 3vw, 28px);
+      background: #F7F6F6;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      min-width: 0;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    }
+
+    .sm-afalina-concept .ui-buttons-block:hover {
+      border-color: var(--cold-blue);
+      background-color: #ffffff;
+      box-shadow: 0 10px 24px rgba(46, 53, 60, 0.05);
+    }
+
+    .sm-afalina-concept .block-subtitle {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--cold-blue);
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .sm-afalina-concept .btn-group-row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+
+    @media (min-width: 480px) {
+      .sm-afalina-concept .btn-group-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+      }
+    }
+
+    .sm-afalina-concept .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--accent);
+      color: #F7F6F6;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: var(--r-2);
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      cursor: pointer;
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      max-width: 100%;
+      text-align: center;
+      word-break: break-word;
+      line-height: 1.25;
+    }
+
+    @media (min-width: 480px) {
+      .sm-afalina-concept .btn-primary {
+        font-size: 14px;
+        padding: 11px 22px;
+      }
+    }
+
+    .sm-afalina-concept .btn-primary:hover {
+      background-color: var(--graphite);
+      border-color: var(--graphite);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(228, 131, 64, 0.35);
+    }
+
+    .sm-afalina-concept .btn-primary:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba(228, 131, 64, 0.2);
+    }
+
+    .sm-afalina-concept .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      color: var(--graphite);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: var(--r-2);
+      text-decoration: none;
+      border: 1px solid var(--graphite);
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      max-width: 100%;
+      text-align: center;
+      word-break: break-word;
+      line-height: 1.25;
+    }
+
+    @media (min-width: 480px) {
+      .sm-afalina-concept .btn-secondary {
+        font-size: 14px;
+        padding: 11px 22px;
+      }
+    }
+
+    .sm-afalina-concept .btn-secondary:hover {
+      background-color: var(--graphite);
+      color: #F7F6F6;
+      border-color: var(--graphite);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(46, 53, 60, 0.18);
+    }
+
+    .sm-afalina-concept .btn-secondary:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    .sm-afalina-concept .tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .sm-afalina-concept .tag-chip {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--graphite);
+      background: #ffffff;
+      padding: 5px 12px;
+      border-radius: var(--r-2);
+      border: 1px solid var(--gray-blue);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      max-width: 100%;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+
+    @media (min-width: 480px) {
+      .sm-afalina-concept .tag-chip {
+        font-size: 12px;
+        padding: 6px 14px;
+      }
+    }
+
+    .sm-afalina-concept .tag-chip:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(228, 131, 64, 0.15);
+      background: #ffffff;
+    }
+
+    .sm-afalina-concept .tag-chip:active {
+      transform: translateY(0);
+    }
+
+    .sm-afalina-concept .tag-pulse-dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+      animation: sm-pulse-dot 2.2s infinite ease-in-out;
+      transition: background-color 0.2s ease;
+    }
+
+    .sm-afalina-concept .tag-chip:hover .tag-pulse-dot {
+      background-color: var(--accent-hover);
+    }
+
+    /* Карточка авто */
+    .sm-afalina-concept .car-card-demo {
+      border: 1px solid var(--gray-blue);
+      border-radius: var(--r-4);
+      background: #F7F6F6;
+      padding: clamp(18px, 3vw, 24px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      position: relative;
+      min-width: 0;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease, background-color 0.25s ease;
+    }
+
+    .sm-afalina-concept .car-card-demo:hover {
+      border-color: var(--accent);
+      background-color: #ffffff;
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(46, 53, 60, 0.08);
+    }
+
+    .sm-afalina-concept .car-card-demo::after {
+      content: 'ПРЕВЬЮ КАРТОЧКИ';
+      position: absolute;
+      top: -9px;
+      right: 14px;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      background: var(--graphite);
+      color: #F7F6F6;
+      padding: 2px 7px;
+      border-radius: var(--r-2);
+      transition: background-color 0.2s ease;
+    }
+
+    .sm-afalina-concept .car-card-demo:hover::after {
+      background-color: var(--accent);
+    }
+
+    .sm-afalina-concept .car-top-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .sm-afalina-concept .car-model {
+      font-family: var(--font-title);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--graphite);
+      margin: 0 0 4px 0;
+      transition: color 0.2s ease;
+    }
+
+    .sm-afalina-concept .car-card-demo:hover .car-model {
+      color: var(--accent);
+    }
+
+    .sm-afalina-concept .car-meta-spec {
+      font-size: 13px;
+      color: var(--cold-blue);
+      font-weight: 500;
+    }
+
+    .sm-afalina-concept .car-price {
+      font-family: var(--font-title);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--accent);
+      white-space: nowrap;
+      transition: transform 0.2s ease;
+    }
+
+    .sm-afalina-concept .car-card-demo:hover .car-price {
+      transform: scale(1.05);
+    }
+
+    .sm-afalina-concept .car-plate-subtle {
+      border: 1px solid var(--gray-blue);
+      border-left: 3px solid var(--cold-blue);
+      padding: 8px 10px;
+      font-family: monospace;
+      font-size: 10px;
+      color: var(--graphite);
+      border-radius: var(--r-2);
+      background: rgba(227, 231, 235, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      flex-wrap: wrap;
+      transition: border-left-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .sm-afalina-concept .car-card-demo:hover .car-plate-subtle {
+      border-left-color: var(--accent);
+      background-color: rgba(227, 231, 235, 0.7);
+    }
+
+    @media (min-width: 480px) {
+      .sm-afalina-concept .car-plate-subtle {
+        font-size: 11px;
+        padding: 8px 12px;
+      }
+    }
+
+    /* СЕКЦИЯ: Тон коммуникации */
+    .sm-afalina-concept .tov-section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--gray-light);
+    }
+
+    .sm-afalina-concept .tov-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 860px) {
+      .sm-afalina-concept .tov-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+    }
+
+    .sm-afalina-concept .tov-principles {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sm-afalina-concept .principle-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: var(--gray-light);
+      border-left: 3px solid var(--cold-blue);
+      border-radius: var(--r-2);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--graphite);
+      transition: background-color 0.2s ease, border-left-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      cursor: default;
+    }
+
+    .sm-afalina-concept .principle-row:hover {
+      background-color: #ffffff;
+      border-left-color: var(--accent);
+      transform: translateX(4px);
+      box-shadow: 0 4px 14px rgba(46, 53, 60, 0.05);
+    }
+
+    .sm-afalina-concept .principle-num {
+      font-family: monospace;
+      font-size: 12px;
+      color: var(--cold-blue);
+      font-weight: 600;
+      flex-shrink: 0;
+      transition: color 0.2s ease;
+    }
+
+    .sm-afalina-concept .principle-row:hover .principle-num {
+      color: var(--accent);
+    }
+
+    .sm-afalina-concept .tov-quote-box {
+      border: 1px solid var(--gray-blue);
+      border-radius: var(--r-4);
+      padding: clamp(20px, 3vw, 32px);
+      background: #F7F6F6;
+      position: relative;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+      cursor: default;
+    }
+
+    .sm-afalina-concept .tov-quote-box:hover {
+      border-color: var(--accent);
+      background-color: #ffffff;
+      box-shadow: 0 10px 24px rgba(46, 53, 60, 0.06);
+    }
+
+    .sm-afalina-concept .tov-quote-phrase {
+      font-family: var(--font-title);
+      font-size: clamp(18px, 2.5vw, 25px);
+      line-height: 1.35;
+      font-weight: 600;
+      color: var(--graphite);
+      margin: 0;
+    }
+
+    .sm-afalina-concept .tov-quote-phrase span {
+      color: var(--accent);
+    }
+
+    /* СЕКЦИЯ: Согласование */
+    .sm-afalina-concept .approval-section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--gray-light);
+    }
+
+    .sm-afalina-concept .approval-box {
+      border: 2px solid var(--graphite);
+      border-radius: var(--r-4);
+      padding: clamp(20px, 3.5vw, 38px);
+      background: #F7F6F6;
+      transition: box-shadow 0.25s ease, transform 0.2s ease;
+    }
+
+    .sm-afalina-concept .approval-box:hover {
+      box-shadow: 0 12px 30px rgba(46, 53, 60, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .sm-afalina-concept .approval-title {
+      font-family: var(--font-title);
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 700;
+      margin: 0 0 20px 0;
+      color: var(--graphite);
+    }
+
+    .sm-afalina-concept .approval-points-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 600px) {
+      .sm-afalina-concept .approval-points-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .sm-afalina-concept .approval-points-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .sm-afalina-concept .approval-point-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--gray-blue);
+      border-radius: var(--r-2);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--graphite);
+      background: rgba(227, 231, 235, 0.4);
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+      cursor: default;
+    }
+
+    .sm-afalina-concept .approval-point-item:hover {
+      background-color: #ffffff;
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      color: var(--accent);
+    }
+
+    .sm-afalina-concept .approval-check {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: var(--r-0);
+      flex-shrink: 0;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .sm-afalina-concept .approval-point-item:hover .approval-check {
+      transform: rotate(45deg) scale(1.2);
+    }
+
+    .sm-afalina-concept .approval-note {
+      font-size: 13px;
+      color: var(--cold-blue);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Подвал */
+    .sm-afalina-concept .footer-section {
+      padding: 36px 0 54px;
+      background-color: #F7F6F6;
+    }
+
+    .sm-afalina-concept .footer-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: space-between;
+      border-top: 1px solid var(--gray-light);
+      padding-top: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .sm-afalina-concept .footer-grid {
+        flex-direction: row;
+        align-items: baseline;
+      }
+    }
+
+    .sm-afalina-concept .footer-brand {
+      font-family: var(--font-title);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--graphite);
+      margin: 0 0 3px 0;
+      transition: color 0.2s ease;
+      cursor: default;
+    }
+
+    .sm-afalina-concept .footer-brand:hover {
+      color: var(--accent);
+    }
+
+    .sm-afalina-concept .footer-desc {
+      font-size: 12px;
+      color: var(--cold-blue);
+      margin: 0;
+    }
+
+    .sm-afalina-concept .footer-calm {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--graphite);
+      margin: 0;
+    }
+
+    .sm-afalina-concept .footer-version {
+      font-family: monospace;
+      font-size: 12px;
+      color: var(--cold-blue);
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    .sm-afalina-concept .footer-version:hover {
+      color: var(--accent);
+      opacity: 0.85;
+    }
+
+    .sm-afalina-concept .footer-version:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .logo-row {
+    display: flex;
+  }
+
+  /* Сетка для 4 логотипов */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки на ПК */
+    gap: 10px;
+    width: 100%;
+  }
+  
+  /* Стили для заголовка и подзаголовка */
+  .hero-title .hero-subtitle {
+  font-size: 0.8em; /* или 18px, 1.2rem — на твой вкус */
+  /*font-weight: normal; /* если не нужна жирность заголовка */
+  line-height: 1.2;
+}
+
+  /* Перестройка для телефона */
+  @media (max-width: 768px) {
+    .logo-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 колонки на телефоне (сетка 2х2) */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo-row {
+      flex-direction: column;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="sm-afalina-concept">
+    
+    <!-- Навигация -->
+    <nav class="sticky-nav-bar" aria-label="Быстрая навигация по разделам концепта">
+      
+      <!-- Мобильный Drawer -->
+      <div id="sm-mobile-drawer" class="mobile-menu-drawer">
+        <ul class="mobile-menu-list">
+          <li class="mobile-menu-item">
+            <a href="#character" class="mobile-menu-click-zone">
+              <span>Характер бренда</span>
+              <span class="mobile-menu-num">[02]</span>
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="#palette" class="mobile-menu-click-zone">
+              <span>Цветовая палитра</span>
+              <span class="mobile-menu-num">[03]</span>
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="#typography" class="mobile-menu-click-zone">
+              <span>Типографика</span>
+              <span class="mobile-menu-num">[04]</span>
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="#logo" class="mobile-menu-click-zone">
+              <span>Логотип</span>
+              <span class="mobile-menu-num">[05]</span>
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="#menu" class="mobile-menu-click-zone">
+              <span>Меню сайта</span>
+              <span class="mobile-menu-num">[06]</span>
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="#ui" class="mobile-menu-click-zone">
+              <span>UI-элементы</span>
+              <span class="mobile-menu-num">[07]</span>
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="#approval" class="mobile-menu-click-zone">
+              <span>Согласование</span>
+              <span class="mobile-menu-num">[08]</span>
+            </a>
+          </li>
+        </ul>
+        <div class="mobile-menu-action">
+          <a href="#approval" class="mobile-cta-btn">Согласовать концепцию</a>
+        </div>
+      </div>
+
+      <a href="#!" class="mobile-menu-backdrop" aria-label="Закрыть меню"></a>
+
+      <div class="container">
+        <div class="sticky-nav-inner">
+          <a href="#hero" class="sticky-brand">
+            <img src="images/icon-1.svg" alt="лого АФАЛИНА rent" style="width: 30px; height: 30px; vertical-align: middle;">
+            <span>АФАЛИНА rent</span>
+          </a>
+
+          <!-- Десктопные ссылки -->
+          <div class="sticky-desktop-links">
+            <a href="#character" class="sticky-nav-link">Характер</a>
+            <a href="#palette" class="sticky-nav-link">Палитра</a>
+            <a href="#typography" class="sticky-nav-link">Шрифты</a>
+            <a href="#logo" class="sticky-nav-link">Логотип</a>
+            <a href="#menu" class="sticky-nav-link">Меню</a>
+            <a href="#ui" class="sticky-nav-link">UI-кит</a>
+            <a href="#approval" class="sticky-nav-link">Согласование</a>
+          </div>
+
+          <!-- Правая зона -->
+          <div class="sticky-nav-right">
+            <span class="sticky-badge">v1.0</span>
+            <a href="#approval" class="sticky-desktop-cta">Согласовать</a>
+            
+            <a href="#sm-mobile-drawer" class="nav-burger-btn nav-burger-open" aria-label="Открыть меню">
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+            </a>
+
+            <a href="#!" class="nav-burger-btn nav-burger-close" aria-label="Закрыть меню">
+              <span class="burger-line line-cross-1"></span>
+              <span class="burger-line line-cross-2"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Сервисная строка -->
+    <header class="top-meta-bar">
+      <div class="container">
+        <div class="top-meta-wrap">
+          <div class="top-meta-group">
+            <span class="status-dot"></span>
+            <span>АФАЛИНА rent · Визуальная система</span>
+          </div>
+          <div class="top-meta-group">
+            <span>Сочи · 43.5855° N, 39.7231° E</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Герой-экран -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="brand-badge">
+              <span>Концепция сайта</span>
+              <span style="color:var(--cold-blue);">/</span>
+              <span>v1.0</span>
+            </div>
+            <h1 class="hero-title">
+  АФАЛИНА rent:<br>
+  <span class="hero-subtitle">Визуальная концепция сайта</span>
+</h1>
+            <p class="hero-desc">Аренда автомобилей в Сочи. Строгий дизайн, понятная навигация и&nbsp;никакой лишней суеты</p>
+          </div>
+          <div class="hero-panel">
+            <div class="hero-panel-coord">МАРШРУТ ПРОЕКТА [01/08]</div>
+            <p class="hero-panel-text">Собираем сайт, в котором легко разобраться<br>с&nbsp;первого экрана</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Раздел: Характер бренда -->
+    <section class="brand-character" id="character">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">
+            <span class="section-tag-dot"></span>
+            [02] ПОЗИЦИОНИРОВАНИЕ
+          </span>
+          <h2 class="section-title">Характер бренда</h2>
+        </div>
+        <div class="character-wrap">
+          <div class="character-quote">
+            <p class="quote-main">Создаём образ надёжного и&nbsp;аккуратного сервиса без курортных клише и&nbsp;навязчивого маркетинга</p>
+            <span style="font-size:11px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--cold-blue);">Базовый принцип подачи</span>
+          </div>
+          <div class="character-accent-card">
+            <span style="font-size:10px; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent); font-weight:600; margin-bottom:10px; display:block;">Ключевое сообщение</span>
+            <p class="accent-text">Понятный выбор машины для поездок без&nbsp;лишних вопросов</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Раздел: Цветовая палитра -->
+    <section class="palette-section" id="palette">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">
+            <span class="section-tag-dot"></span>
+            [03] 6 ЦВЕТОВ
+          </span>
+          <h2 class="section-title">Цветовая палитра</h2>
+        </div>
+
+        <div class="palette-grid">
+          
+          <!-- 1. Светлый фон -->
+          <div class="color-card c-dark" style="background-color: #F7F6F6;">
+            <div class="card-top">
+              <span class="color-name">Светлый фон</span>
+              <span class="color-mood">Чистое поле</span>
+            </div>
+            <div class="card-bottom">
+              <span class="color-role">Основа интерфейса</span>
+              <div class="color-action-row">
+                <span class="hex-val">#F7F6F6</span>
+                <label class="copy-label" title="Скопировать HEX">
+                  <input type="checkbox" class="copy-toggle-input" aria-label="Скопировать цвет #F7F6F6">
+                  <span class="copy-btn-ui">
+                    <span class="state-idle">Копировать</span>
+                    <span class="state-done">Готово</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Тёмный графит -->
+          <div class="color-card c-light" style="background-color: #2E353C;">
+            <div class="card-top">
+              <span class="color-name">Тёмный графит</span>
+              <span class="color-mood">Баланс и акцент</span>
+            </div>
+            <div class="card-bottom">
+              <span class="color-role">Текст и контраст</span>
+              <div class="color-action-row">
+                <span class="hex-val">#2E353C</span>
+                <label class="copy-label" title="Скопировать HEX">
+                  <input type="checkbox" class="copy-toggle-input" aria-label="Скопировать цвет #2E353C">
+                  <span class="copy-btn-ui">
+                    <span class="state-idle">Копировать</span>
+                    <span class="state-done">Готово</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Оранжевый акцент -->
+          <div class="color-card c-light" style="background-color: #E48340;">
+            <div class="card-top">
+              <span class="color-name">Главный оранжевый</span>
+              <span class="color-mood">Энергия поездки</span>
+            </div>
+            <div class="card-bottom">
+              <span class="color-role">Действия и фокус</span>
+              <div class="color-action-row">
+                <span class="hex-val">#E48340</span>
+                <label class="copy-label" title="Скопировать HEX">
+                  <input type="checkbox" class="copy-toggle-input" aria-label="Скопировать цвет #E48340">
+                  <span class="copy-btn-ui">
+                    <span class="state-idle">Копировать</span>
+                    <span class="state-done">Готово</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Светлый серый -->
+          <div class="color-card c-dark" style="background-color: #E3E7EB;">
+            <div class="card-top">
+              <span class="color-name">Светлый серый</span>
+              <span class="color-mood">Мягкая среда</span>
+            </div>
+            <div class="card-bottom">
+              <span class="color-role">Разделители и фон</span>
+              <div class="color-action-row">
+                <span class="hex-val">#E3E7EB</span>
+                <label class="copy-label" title="Скопировать HEX">
+                  <input type="checkbox" class="copy-toggle-input" aria-label="Скопировать цвет #E3E7EB">
+                  <span class="copy-btn-ui">
+                    <span class="state-idle">Копировать</span>
+                    <span class="state-done">Готово</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Серо-голубой -->
+          <div class="color-card c-dark" style="background-color: #B7C1CB;">
+            <div class="card-top">
+              <span class="color-name">Серо-голубой</span>
+              <span class="color-mood">Надёжность</span>
+            </div>
+            <div class="card-bottom">
+              <span class="color-role">Вторичные блоки</span>
+              <div class="color-action-row">
+                <span class="hex-val">#B7C1CB</span>
+                <label class="copy-label" title="Скопировать HEX">
+                  <input type="checkbox" class="copy-toggle-input" aria-label="Скопировать цвет #B7C1CB">
+                  <span class="copy-btn-ui">
+                    <span class="state-idle">Копировать</span>
+                    <span class="state-done">Готово</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Холодный серо-голубой -->
+          <div class="color-card c-dark" style="background-color: #8B9CAD;">
+            <div class="card-top">
+              <span class="color-name">Холодный голубой</span>
+              <span class="color-mood">Горизонт моря</span>
+            </div>
+            <div class="card-bottom">
+              <span class="color-role">Тонкие маркеры</span>
+              <div class="color-action-row">
+                <span class="hex-val">#8B9CAD</span>
+                <label class="copy-label" title="Скопировать HEX">
+                  <input type="checkbox" class="copy-toggle-input" aria-label="Скопировать цвет #8B9CAD">
+                  <span class="copy-btn-ui">
+                    <span class="state-idle">Копировать</span>
+                    <span class="state-done">Готово</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Раздел: Типографика -->
+    <section class="typography-section" id="typography">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">
+            <span class="section-tag-dot"></span>
+            [04] ШРИФТОВАЯ ПАРА
+          </span>
+          <h2 class="section-title">Типографика</h2>
+        </div>
+        <div class="typo-showcase">
+          <div class="typo-hero-text">Аренда авто в Сочи</div>
+          <div class="typo-cyrillic">Аа Бб Вв Гг Дд Ее Жж Зз Ии Йй Кк Лл Мм Нн</div>
+          <div class="typo-digits">0123456789</div>
+          <div class="typo-caption-box">
+            <span class="typo-caption">Golos Text — характер заголовков. Inter — ясность интерфейса.</span>
+            <span style="font-size:11px; font-family:monospace; color:var(--cold-blue);">СИСТЕМА: СБАЛАНСИРОВАННАЯ</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Раздел: Логотип -->
+    <section class="logo-section" id="logo">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">
+            <span class="section-tag-dot"></span>
+            [05] ИДЕНТИФИКАЦИЯ
+          </span>
+          <h2 class="section-title">Логотип</h2>
+        </div>
+        <p class="logo-sub">Варианты логотипа и его компоновки</p>
+
+        <div class="logo-variants-grid">
+          
+          <!-- Вариант 1 -->
+          <div class="logo-card-frame">
+            <div class="logo-tag-row">
+              <span>Вариант 1 · Основное применение</span>
+              <span>Полная версия</span>
+            </div>
+
+            <div class="logo-previews">
+              <div class="preview-box light-bg">
+                <div class="logo-ph-h">
+                  <img src="images/logo-1.svg" alt="АФАЛИНА rent" style="max-width: 100%; height: auto;">
+                </div>
+              </div>
+       
+        <div class="logo-row" style="gap: 15px; width: 100%;">
+  
+  <!-- Первый логотип в СВОЕЙ плашке -->
+  <div class="preview-box dark-bg" style="flex: 1; display: flex; align-items: center; justify-content: center;">
+    <div class="logo-ph-h">
+      <img src="images/icon-1.svg" alt="иконка" style="width: 24px; height: auto;">
+      <span>АФАЛИНА</span>
+      <span class="rent-tag">rent</span>
+    </div>
+  </div>
+
+  <!-- Второй логотип в СВОЕЙ плашке -->
+  <div class="preview-box dark-bg" style="flex: 1; display: flex; align-items: center; justify-content: center;">
+    <div class="logo-ph-h">
+      <img src="images/icon-3.svg" alt="иконка" style="width: 24px; height: auto;">
+      <span>АФАЛИНА</span>
+      <span class="rent-tag">rent</span>
+    </div>
+  </div>
+
+</div>
+            </div>
+
+            <div class="context-previews">
+              <div class="context-box">
+                <span class="context-label">В шапке сайта</span>
+                <div class="mock-header-strip">
+                  <span>АФАЛИНА rent</span>
+                  <span style="color:var(--accent);">●</span>
+                </div>
+              </div>
+              <div class="context-box">
+                <span class="context-label">На мобильном</span>
+                <div class="mock-mob-strip">
+                  <span>АФАЛИНА</span>
+                  <span style="font-size:9px; border:1px solid currentColor; padding:1px 3px;">rent</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Вариант 2 -->
+          <div class="logo-card-frame">
+            <div class="logo-tag-row">
+              <span>Иконки бренда</span>
+              <span>Компактные версии</span>
+            </div>
+
+            <div class="logo-previews">
+              <div class="preview-box light-bg">
+                <div class="logo-ph-v">
+                  <img src="images/logo-5.svg" alt="АФАЛИНА rent" style="max-width: 100%; height: auto;">
+                </div>
+              </div>
+              <div class="logo-grid">
+  <!-- Квадрат 1 -->
+  <div class="preview-box dark-bg" style="aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center;">
+    <img src="images/favicon-1.svg" alt="лого 1" style="width: 80%; height: auto;">
+  </div>
+  <!-- Квадрат 2 -->
+  <div class="preview-box dark-bg" style="aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center;">
+    <img src="images/favicon-2.svg" alt="лого 2" style="width: 80%; height: auto;">
+  </div>
+  <!-- Квадрат 3 -->
+  <div class="preview-box light-bg" style="aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center;">
+    <img src="images/favicon-3.svg" alt="лого 3" style="width: 80%; height: auto;">
+  </div>
+  <!-- Квадрат 4 -->
+  <div class="preview-box light-bg" style="aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center;">
+    <img src="images/favicon-4.svg" alt="лого 4" style="width: 80%; height: auto;">
+  </div>
+</div>
+            </div>
+
+            <div class="context-previews">
+              <div class="context-box">
+                <span class="context-label">В шапке сайта</span>
+                <div class="mock-header-strip">
+                  <div style="line-height:1.4; text-align:left;">
+                    <div style="font-size:9px;">АФАЛИНА</div>
+                    <div style="font-size:7px; color:var(--accent); letter-spacing:0.1em;">RENT</div>
+                  </div>
+                  <span>☰</span>
+                </div>
+              </div>
+              <div class="context-box">
+                <span class="context-label">На мобильном</span>
+                <div class="mock-mob-strip">
+                  <span style="font-size:10px;">АФАЛИНА · R</span>
+                  <span>•••</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="favicon-row">
+          <img src="images/favicon-pin.svg" alt="АФАЛИНА rent фавикон" style="width: 32px; height: 32px;">
+          <span>Значок вкладки браузера (32×32px)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Раздел: Меню сайта -->
+    <section class="menu-showcase-section" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">
+            <span class="section-tag-dot"></span>
+            [06] НАВИГАЦИЯ
+          </span>
+          <h2 class="section-title">Меню сайта</h2>
+        </div>
+
+        <div class="nav-demo-wrapper">
+          <div class="nav-desktop-card">
+            <div class="site-logo">
+  <img src="images/icon-1.svg" alt="иконка" style="width: 30px; height: 30px; flex-shrink: 0;">
+  <span>АФАЛИНА rent</span>
+</div>
+
+            <ul class="nav-links-list">
+              <li class="nav-link-item"><a href="#hero">Автопарк</a></li>
+              <li class="nav-link-item"><a href="#hero">Условия аренды</a></li>
+              <li class="nav-link-item"><a href="#hero">Отзывы</a></li>
+              <li class="nav-link-item"><a href="#hero">Контакты</a></li>
+            </ul>
+
+            <div style="flex-shrink:0;">
+              <a href="#hero" class="btn-primary" style="padding: 9px 16px; font-size: 13px;">Подобрать авто</a>
+            </div>
+          </div>
+
+          <div>
+            <span style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--cold-blue); font-weight:600; display:block; margin-bottom:8px;">Мобильный вид меню сайта</span>
+            <div class="nav-mobile-card">
+              <div style="font-family:var(--font-title); font-size:20px; font-weight:700; white-space:nowrap; display: flex; align-items: center; gap: 8px;">
+  <img src="images/icon-1.svg" alt="иконка" style="width: 30px; height: 30px;">
+  <span>АФАЛИНА rent</span>
+</div>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <div class="mob-burger-btn" aria-label="Открыть меню сайта">
+                  <span class="mob-burger-line"></span>
+                  <span class="mob-burger-line"></span>
+                  <span class="mob-burger-line"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Раздел: UI-элементы -->
+    <section class="ui-section" id="ui">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">
+            <span class="section-tag-dot"></span>
+            [07] ИНТЕРФЕЙС
+          </span>
+          <h2 class="section-title">UI-элементы</h2>
+        </div>
+
+        <div class="ui-layout-grid">
+          
+          <div class="ui-buttons-block">
+            <div>
+              <p class="block-subtitle" style="margin-bottom:12px;">Кнопки целевых действий</p>
+              <div class="btn-group-row">
+                <a href="#hero" class="btn-primary">Подобрать автомобиль</a>
+                <a href="#hero" class="btn-secondary">Узнать условия</a>
+              </div>
+            </div>
+
+            <div>
+              <p class="block-subtitle" style="margin-bottom:12px;">Теги параметров авто (с пульсирующим акцентом)</p>
+              <div class="tags-row">
+                <div class="tag-chip">
+                  <span class="tag-pulse-dot"></span>
+                  <span>Автомат</span>
+                </div>
+                <div class="tag-chip">
+                  <span class="tag-pulse-dot"></span>
+                  <span>5 мест</span>
+                </div>
+                <div class="tag-chip">
+                  <span class="tag-pulse-dot"></span>
+                  <span>Бензин</span>
+                </div>
+                <div class="tag-chip">
+                  <span class="tag-pulse-dot"></span>
+                  <span>Кондиционер</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p class="block-subtitle" style="margin-bottom:8px;">Инженерный маркер сетки</p>
+              <div style="font-size:11px; color:var(--cold-blue); display:flex; flex-wrap:wrap; gap:12px;">
+                <span>Радиус: 2–4px</span>
+                <span>Линия: сплошная 1px</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="car-card-demo">
+            <div>
+              <div class="car-top-info">
+                <div>
+                  <h3 class="car-model">Toyota Camry</h3>
+                  <div class="car-meta-spec">Автомат · 5 мест</div>
+                </div>
+                <div class="car-price">от 3 500 ₽/сутки</div>
+              </div>
+            </div>
+
+            <div class="car-plate-subtle">
+              <span>МАРШРУТ: АДЛЕР — КРАСНАЯ ПОЛЯНА</span>
+              <span style="color:var(--accent); font-weight:600;">ДОСТУПЕН</span>
+            </div>
+
+            <div>
+              <a href="#hero" class="btn-primary" style="width:100%;">Забронировать автомобиль</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Раздел: Тон коммуникации -->
+    <section class="tov-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">
+            <span class="section-tag-dot"></span>
+            [08] ТОН ОБЩЕНИЯ
+          </span>
+          <h2 class="section-title">Тон коммуникации</h2>
+        </div>
+
+        <div class="tov-grid">
+          <div class="tov-principles">
+            <div class="principle-row">
+              <span class="principle-num">01</span>
+              <span>понятно без канцелярита</span>
+            </div>
+            <div class="principle-row">
+              <span class="principle-num">02</span>
+              <span>дружелюбно и открыто</span>
+            </div>
+            <div class="principle-row">
+              <span class="principle-num">03</span>
+              <span>без давления на выбор</span>
+            </div>
+            <div class="principle-row">
+              <span class="principle-num">04</span>
+              <span>спокойно и уверенно</span>
+            </div>
+          </div>
+
+          <div class="tov-quote-box">
+            <span style="font-size:10px; text-transform:uppercase; letter-spacing:0.1em; color:var(--cold-blue); font-weight:600; display:block; margin-bottom:12px;">Пример диалога</span>
+            <p class="tov-quote-phrase">Поможем выбрать автомобиль <span>и&nbsp;спокойно разобраться в&nbsp;условиях аренды.
+
+</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Раздел: Согласование -->
+    <section class="approval-section" id="approval">
+      <div class="container">
+        <div class="approval-box">
+          <h2 class="approval-title">Что согласуем</h2>
+          <div class="approval-points-grid">
+            <div class="approval-point-item">
+              <span class="approval-check"></span>
+              <span>визуальное направление</span>
+            </div>
+            <div class="approval-point-item">
+              <span class="approval-check"></span>
+              <span>палитру</span>
+            </div>
+            <div class="approval-point-item">
+              <span class="approval-check"></span>
+              <span>типографику</span>
+            </div>
+            <div class="approval-point-item">
+              <span class="approval-check"></span>
+              <span>вариант логотипа</span>
+            </div>
+          </div>
+          <p class="approval-note">После утверждения этих параметров концепция будет интегрирована во все блоки и страницы сайта.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">АФАЛИНА rent</div>
+            <p class="footer-desc">Аренда автомобилей в Сочи</p>
+          </div>
+          <div>
+            <p class="footer-calm">Всё на своём месте — от первой кнопки до заявки.</p>
+          </div>
+          <div>
+            <a
+  class="footer-version"
+  href="https://t.me/mashapromtai"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Разработка Masha_DesignLab
+</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

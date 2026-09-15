@@ -2751,5 +2751,14 @@
     </footer>
 
   </div>
+
+  <script>
+  document.querySelectorAll('a[href="#hero"]').forEach(link => {
+    link.addEventListener('click', () => {
+      history.replaceState(null, '', location.pathname);
+    });
+  });
+</script>
+
 </body>
 </html>
